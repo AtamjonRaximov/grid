@@ -1,0 +1,96 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+main {
+  border: solid;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 10px;
+  grid-template-areas:
+    "bir bir ikki"
+    "bir bir uch"
+    "tort olti olti"
+    "besh olti olti"
+    "yetti yetti sakkiz"
+    "yetti yetti toqiz";
+}
+.child {
+  border: solid;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+.child_bir {
+  border: solid;
+  grid-area: bir;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+.child_olti {
+  border: solid;
+  grid-area: olti;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+.child_yetti {
+  border: solid;
+  grid-area: yetti;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+}
+.child_onm,.child_onbir,.child_ikki,.child_uch,.child_tort,.child_besh{
+    display: none;
+}
+
+@media (min-width: 700px) {
+  main {
+    border: solid;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+    grid-template-areas:
+      "bir bir ikki uch"
+      "bir bir tort besh"
+      "olti yetti on on"
+      "sakkiz toqqiz on on"
+      "onbir onbir onikki onuch"
+      "onbir onbir ontort onbesh";
+  }
+  .child_bir {
+    border: solid;
+    grid-area: bir;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+  }
+  .child_on {
+    border: solid;
+    grid-area: bir;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+  }
+  .child_onbir {
+    border: solid;
+    grid-area: onbir;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+  }
+  .child_onm,.child_onbir,.child_ikki,.child_uch,.child_tort,.child_besh{
+    display: block;
+    border: solid;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+}
+}
